@@ -1,0 +1,59 @@
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Sign</title>
+
+<style>
+
+        div{
+
+        position : absolute;
+
+        right : 10px;
+
+        top : 5px
+
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+
+<div>
+
+
+
+    </div>
+
+<H2>Add Products</H2>
+
+<form action="/added/" method="post">
+
+    {% csrf_token %}
+
+    products:
+
+    <input type="text" name="product" required><br><br>
+
+    Quantity:
+
+    <input type="number" name="quantity" required></textarea>
+
+    <br><br>
+
+    <button type="submit" value="Submit">Submit</button>
+
+</form>
+
+<div>
+    <button type=“button“ href="{% url 'home:logout' %}">Logout</button>
+</div>
+</body>
+
+</html>
